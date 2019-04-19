@@ -2,6 +2,7 @@ package acadêmico;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class RepositórioDeAvaliações {
@@ -17,10 +18,10 @@ public class RepositórioDeAvaliações {
                 .stream()
                 .filter(avaliação -> avaliação.getDisciplina().equals(disciplina))
                 .collect(Collectors.toList());
-        List<Aluno> alunosDaDisciplina = avaliaçõesPorDisciplina.stream()
+        Set<Aluno> alunosDaDisciplina = avaliaçõesPorDisciplina.stream()
                 .map(Avaliação::getAluno)
-                .collect(Collectors.toList());
-        List<Aluno > alunosAprovados = new ArrayList<>();
+                .collect(Collectors.toSet());
+        List<Aluno> alunosAprovados = new ArrayList<>();
         for (Aluno aluno : alunosDaDisciplina) {
             List<Avaliação> avaliaçõesDoAluno = avaliaçõesPorDisciplina.stream()
                     .filter(avaliação -> avaliação.getAluno().equals(aluno))
@@ -35,6 +36,6 @@ public class RepositórioDeAvaliações {
             }
         }
 
-        return (Aluno[]) alunosAprovados.toArray();
+        return alunosAprovados.toArray(new Aluno[0]);
     }
 }

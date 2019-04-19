@@ -16,6 +16,11 @@ public class Aluno {
 
     }
 
+    @Override
+    public String toString() {
+        return "\n" + "nome: " + nome
+                + ", ra: " + ra;
+    }
 
     public int getRA (){
         return this.ra;
