@@ -5,6 +5,11 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+/**
+ * @author Felipe Bezerra de Assis
+ * @author Rai Marcelo dos Santos
+ */
+
 public class RepositórioDeAvaliações {
 
     private List<Avaliação> avaliações = new ArrayList<>();

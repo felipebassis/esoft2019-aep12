@@ -1,5 +1,9 @@
 package acadêmico;
 
+/** @author Felipe Bezerra de Assis
+ *  @author Rai Marcelo dos Santos
+ */
+
 public class Aluno {
 
     private String nome;

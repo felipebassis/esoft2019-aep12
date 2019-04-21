@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * @author Felipe Bezerra de Assis
+ * @author Rai Marcelo dos Santos
+ */
+
 public class App {
 
     public static void main(String[] args) {
